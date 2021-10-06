@@ -45,16 +45,15 @@ public:
     }
     void ShowQueue()
     {
-        int i;
         if(isEmpty()) {
-            cout << endl << "Queue is Empty!!" << endl;
+            cout <<"\nQueue is Empty!!\n";
             return;
         }
         cout <<"\nFront = "<< front;
         cout << "\nQueue elements : ";
-        for(i=front; i<=rear; i++)
-            cout << queue[i] << " ";
-        cout<<"\nRear = " << rear << endl;
+        for(int i=front;i<=rear;i++)
+            cout<<queue[i]<<" ";
+        cout<<"\nRear = "<<rear<<"\n";
     }
 };
 int main()
