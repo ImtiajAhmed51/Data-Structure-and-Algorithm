@@ -268,6 +268,15 @@ public:
             return obj;
         }
     }
+    int HeavyEarning(){
+        return heavyEarning;
+    }
+    int MediumEarning(){
+        return mediumEarning;
+    }
+    int LightEarning(){
+        return lightEarning;
+    }
     int totalEarning(){
         return heavyEarning+mediumEarning+lightEarning;
     }
@@ -297,7 +306,7 @@ int main() {
         cout<<"\t3. Total Toll Amount.\n";
         cout<<"\t4. Car Search.\n";
         cout<<"\t5. Exit/Close\n";
-        int Case,Case1;
+        int Case,Case1,amount;
         string date,carNum,ticket;
         cout<<"Enter Your Input: ";
         cin>>Case;
@@ -377,21 +386,40 @@ int main() {
                         cout<<"\nExit Counter\n";
                         ob.ShowAll();
                     }
-                } else{
-                    cout<<"Wrong Input\n";
+                } else {
+                    cout << "Wrong Input\n";
                 }
                 break;
             case 3:
-                cout<<"\nTotal Amount: "<<obj3.totalEarning()<<" Taka Only.\n";
+                cout<<"\n\t1. Heavy Total Earning.\n";
+                cout<<"\t2. Medium Total Earning.\n";
+                cout<<"\t3. Light Total Earning.\n";
+                cout<<"\t4. Heavy, Medium & Light Total Earning.\n";
+                cout<<"Enter Your Number: ";
+                cin>>amount;
+                if(amount==1){
+                    cout<<"\nHeavy Earning.\n";
+                    cout<<"Total Amount: "<<obj3.HeavyEarning()<<" Taka Only.\n";
+                }else if (amount==2){
+                    cout<<"\nMedium Earning.\n";
+                    cout<<"Total Amount: "<<obj3.MediumEarning()<<" Taka Only.\n";
+                }else if(amount==3){
+                    cout<<"\nLight Earning.\n";
+                    cout<<"Total Amount: "<<obj3.LightEarning()<<" Taka Only.\n";
+                }else if(amount==4){
+                    cout<<"\nHeavy,Medium & Light Total Earning.\n";
+                    cout<<"Total Amount: "<<obj3.totalEarning()<<" Taka Only.\n";
+                }
+                else
+                    cout<<"\nWrong Input\n";
                 break;
             case 4:
                 cout<<"Car Number: ";
                 cin>>carNum;
                 ob=obj3.search(carNum);
                 if (ob.getCarNum()==""){
-                } else{
+                } else
                     obj3.search(carNum).ShowAll();
-                }
                 break;
             case 5:
                 choice=false;
