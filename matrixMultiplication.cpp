@@ -44,5 +44,5 @@ int main(){
             cout << "Enter element Second Matrix" << i + 1 << j + 1 << " : ";
             cin >> secondMat[i][j];
         }
-    matrixMultiplication(firstMat,secondMat,rows1,rows2,col1,col2);
-}
+    matrixMultiplication(firstMat,secondMat,rows1,rows2,col1,col2)
+      }
