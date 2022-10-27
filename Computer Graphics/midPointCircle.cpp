@@ -1,28 +1,20 @@
 #include<iostream>
 #include <cmath>
 using namespace std;
-void incrementalLine(int x1, int y1, int x2, int y2){
-    float m=(float)(y2-y1)/(float)(x2-x1);
-    float y=(float)y1;
-    float x=(float)x1;
-    if(m<1)
-        while (x1<=x2){
-            cout<<"|"<<x1<<","<<round(y)<<"| y= "<<y<<"\n";
-            y+=m;
-            x1++;
-        }
-    else if(m==1)
-        while (x1<=x2) {
-            cout <<"|"<< x1 << "," << y1 << "|\n";
-            x1++;
-            y1++;
-        }
-    else
-        while (y1<=y2){
-            cout<<"|"<<round(x)<<","<<y1<<"| x= "<<x<<"\n";
-            x=x+1+1/m;
-            y1++;
-        }
+void midPointCircle(int x,int y,int r){
+    int x1=0;
+    int pk=1-r;
+    int y1=r;
+    while (x1<y1){
+        int y2=y1;
+        if(pk>=0)
+            cout<<"|"<<x+x1<<","<<y+y1--;
+        else if(pk<0)
+            cout<<"|"<<x+x1<<","<<y+y1;
+        x1++;
+        cout<<"|"<<pk<<"|"<<x+x1<<","<<y+y1<<"|\n";
+        pk=pk+(2*x1)+((y1*y1)-(y2*y2))-(y1-y2)+1;
+    }
 }
 int main(){
     midPointCircle(0,0,9);
