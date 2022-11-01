@@ -17,9 +17,8 @@ void midPointLine(int x1, int y1, int x2, int y2){
             initPk=initPk+(2*dy)-(2*dx)*(y1-y3);
         }
     else if(m==1)
-        while(x1<=x2){
+        while(x1<=x2)
             cout<<"|"<<x1++<<","<<y1++<<"|\n";
-        }
 }
 int main(){
      midPointLine(10, 2, 19, 8);
